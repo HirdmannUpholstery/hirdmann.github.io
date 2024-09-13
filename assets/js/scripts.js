@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Load the head, header, and footer content
-        loadContent('assets/inc/head.php', 'head-placeholder');
-        loadContent('assets/inc/header.php', 'header-placeholder');
-        loadContent('assets/inc/footer.php', 'footer-placeholder');
+        loadContent('assets/inc/head.html', 'head-placeholder');
+        loadContent('assets/inc/header.html', 'header-placeholder');
+        loadContent('assets/inc/footer.html', 'footer-placeholder');
 
 });
