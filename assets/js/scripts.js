@@ -20,19 +20,4 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Hamburger navigation elements not found");
     }
 
-        // Function to load content from a file and inject it into a specific element
-        function loadContent(url, elementId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(elementId).innerHTML = data;
-                })
-                .catch(error => console.error('Error loading file:', error));
-        }
-
-        // Load the head, header, and footer content
-        loadContent('assets/inc/head.html', 'head-placeholder');
-        loadContent('assets/inc/header.html', 'header-placeholder');
-        loadContent('assets/inc/footer.html', 'footer-placeholder');
-
 });

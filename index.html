@@ -1,8 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head id="head-placeholder"></head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hirdmann Upholstery</title>
+    <meta name="description" content="Hirdmann Upholstery and custom wearables. Top quality work at affordable prices.">
+    <link rel="icon" href="../assets/images/hirdmann-logo-favicon.png">
+    <link rel="stylesheet" href="/assets/css/style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="/assets/js/scripts.js"></script>
+</head>
 <body>
-<header id="header-placeholder"></header>
+<header>
+    <div class="nav-wrapper">
+        <img class="logo" src="../assets/images/hirdmann-logo.png">
+        <nav class="desktop-nav">
+            <a class="stitched-button" href="#about">About Us</a>
+            <a class="stitched-button" href="#products">Products</a>
+            <a class="stitched-button" href="#contact">Contact Us</a>
+        </nav>
+
+        <nav class="hamburger-nav">
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <div class="mobile-nav" id="mobile-nav">
+                <div class="close-btn" id="close-btn">&times;</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
 
 <main>
     <div class="hero container">
@@ -39,8 +76,22 @@
     </section>
 </main>
 
-<footer id="footer-placeholder"></footer>
+<footer>
+    <p>&copy; 2024 Upholstery & Bags</p>
+</footer>
 
-<script src="assets/js/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
 </body>
 </html>
