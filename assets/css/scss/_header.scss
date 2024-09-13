@@ -1,0 +1,186 @@
+header {
+  display: flex;
+  justify-content: center;
+  grid-column-gap: 20px;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  @media only screen and (max-width: 1050px){
+    grid-column-gap: 10px;
+  }
+  @media only screen and (max-width: 800px){
+    grid-column-gap: 7px;
+  }
+  @media only screen and (max-width: 550px){
+    grid-column-gap: 5px;
+  }
+    nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+      @media only screen and (max-width: 1050px){
+        grid-gap: 10px;
+      }
+      @media only screen and (max-width: 800px){
+        grid-gap: 7px;
+      }
+      @media only screen and (max-width: 550px){
+        grid-gap: 5px;
+      }
+    a {
+      margin: 0 15px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      &.stitched-button {
+        background-color: #f8f8f8;
+        border: 2px dashed #333;
+        color: #333;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        @media only screen and (max-width: 1050px){
+          font-size: 14px;
+        }
+        @media only screen and (max-width: 800px){
+          font-size: 13px;
+        }
+        @media only screen and (max-width: 550px){
+          font-size: 12px;
+        }
+        &:before, &:after{
+          content: '';
+          position: absolute;
+          border: 2px dashed #fff;
+          pointer-events: none;
+          border-radius: 8px;
+        }
+        &:before{
+          top: 5px;
+          left: 5px;
+          right: 5px;
+          bottom: 5px;
+        }
+        &:after{
+          top: -5px;
+          left: -5px;
+          right: -5px;
+          bottom: -5px;
+        }
+        &:hover{
+          background-color: #333;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .logo{
+    max-width: 100px;
+    @media only screen and (max-width: 1050px){
+      max-width: 75px;
+    }
+    @media only screen and (max-width: 800px){
+      //max-width: 60px;
+    }
+    @media only screen and (max-width: 550px){
+      //max-width: 50px;
+    }
+  }
+  .hamburger-nav{
+    nav {
+      position: relative;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .hamburger .line {
+      background-color: #333;
+      height: 3px;
+      width: 100%;
+      border-radius: 2px;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 300px;
+      background-color: #f8f8f8;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-nav ul {
+      padding-top: 60px;
+    }
+
+    .mobile-nav li {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .mobile-nav a {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .close-btn {
+      font-size: 30px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    /* Show the hamburger button and hide the normal menu on small screens */
+    @media (max-width: 1050px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-nav {
+        display: block;
+      }
+    }
+
+    .mobile-nav.active {
+      transform: translateX(0);
+    }
+  }
+}

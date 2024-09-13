@@ -1,0 +1,39 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #e3e3d7, #b3b0a1);
+}
+
+
+
+.hero {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.about, .products, .contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.products .product {
+  display: inline-block;
+  margin: 10px;
+  width: 200px;
+}
