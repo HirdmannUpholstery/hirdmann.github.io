@@ -8,6 +8,7 @@
         <meta name="description" content="Hirdmann Upholstery and custom wearables. Top quality work at affordable prices.">
         <link rel="icon" href="../assets/images/hirdmann-logo-favicon.png">
         <link rel="stylesheet" href="/assets/css/style.css"> <!-- Link to your CSS file -->
-        <script src="/assets/js/scripts.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <script src="/assets/js/scripts.js"></script>
     </head>
     <body>

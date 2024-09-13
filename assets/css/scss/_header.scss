@@ -1,14 +1,20 @@
 header {
-  display: flex;
-  justify-content: center;
-  grid-column-gap: 20px;
-  align-items: center;
-  background-color: #f8f9fa;
-  padding: 10px 20px;
   position: fixed;
   top: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  z-index: 9999999999;
+  .nav-wrapper{
+  display: flex;
+  justify-content: space-between;
+  grid-column-gap: 20px;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+
   @media only screen and (max-width: 1050px){
     grid-column-gap: 10px;
+    justify-content: space-between;
   }
   @media only screen and (max-width: 800px){
     grid-column-gap: 7px;
@@ -23,6 +29,9 @@ header {
     justify-content: center;
     grid-gap: 20px;
       @media only screen and (max-width: 1050px){
+        &.desktop-nav{
+          display: none;
+        }
         grid-gap: 10px;
       }
       @media only screen and (max-width: 800px){
@@ -98,6 +107,7 @@ header {
     }
   }
   .hamburger-nav{
+    display: none;
     nav {
       position: relative;
     }
@@ -111,16 +121,18 @@ header {
       color: #333;
     }
     .hamburger {
-      display: none;
+
       cursor: pointer;
       flex-direction: column;
       justify-content: space-between;
       width: 30px;
       height: 20px;
-      position: fixed;
-      top: 20px;
-      right: 20px;
+      position: relative;
+      right: 50px;
       z-index: 1000;
+      &.hidden{
+        display: none;
+      }
     }
 
     .hamburger .line {
@@ -183,4 +195,5 @@ header {
       transform: translateX(0);
     }
   }
+}
 }
