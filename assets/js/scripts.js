@@ -20,4 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Hamburger navigation elements not found");
     }
 
+    console.log("js is working");
+
 });

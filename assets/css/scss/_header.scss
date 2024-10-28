@@ -108,6 +108,9 @@ header {
   }
   .hamburger-nav{
     display: none;
+    @media only screen and (max-width: 1050px){
+      display: block
+    }
     nav {
       position: relative;
     }
