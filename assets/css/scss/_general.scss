@@ -2,7 +2,7 @@ body {
   font-family: 'Georgia', serif;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle, #e3e3d7, #b3b0a1);
+  background: #333;
 }
 
 main{
@@ -31,11 +31,12 @@ main{
         transform: translateX(-50%) translateY(-50%);
         text-align: center;
         padding: 0 40px;
-        border: 2px dashed black;
+        //border: 2px dashed black;
         h1{
-          font-size: 82px;
+          font-size: 100px;
           text-transform: uppercase;
           letter-spacing: 1.5px;
+          color: #333;
           @media only screen and (max-width: 1050px){
             font-size: 50px;
           }
@@ -57,7 +58,7 @@ main{
   margin-top: 20px;
 }
 .small{
-  font-size: 28.5px;
+  font-size: 35px;
 }
 
 .swiper {
@@ -81,12 +82,12 @@ main{
 
 
 
-.about, .products, .contact {
+.about, .products, .contact, .selects {
   padding: 50px 20px;
   text-align: center;
   max-width: 60%;
   margin: 0 auto 50px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   p{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
@@ -96,16 +97,21 @@ main{
   @media only screen and (max-width: 800px){
     max-width: 80%;
   }
+  &.no-background{
+    background: transparent;
+  }
 }
 
 .about{
   margin-top: 50px;
 }
 
-.products {
+.products, .custom-bags, .custom-upholstery {
   width: 100%;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   grid-gap: 20px;
   h2{
@@ -121,6 +127,21 @@ main{
       max-height: 350px;
       min-height: 350px;
       object-fit: cover;
+    }
+  }
+}
+
+
+h2, h3, p{
+  color: #fff;
+}
+
+.contact-wrapper{
+  .details-wrapper{
+    p{
+      a{
+        color: #fff;
+      }
     }
   }
 }
