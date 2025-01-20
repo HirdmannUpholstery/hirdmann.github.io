@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Georgia', serif;
   margin: 0;
@@ -32,6 +36,9 @@ main{
         text-align: center;
         padding: 0 40px;
         //border: 2px dashed black;
+        @media only screen and (max-width: 550px){
+          background: rgba(255,255,255,.5)
+        }
         h1{
           font-size: 100px;
           text-transform: uppercase;
@@ -44,7 +51,8 @@ main{
             font-size: 40px;
           }
           @media only screen and (max-width: 550px){
-            font-size: 30px;
+            font-size: 40px;
+            color: #333;
           }
         }
       }
@@ -82,12 +90,13 @@ main{
 
 
 
-.about, .products, .contact, .selects {
+.about, .products, .contact, .selects, .before-afters {
   padding: 50px 20px;
   text-align: center;
   max-width: 60%;
   margin: 0 auto 50px;
   background: rgba(255, 255, 255, 0.2);
+
   p{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
@@ -96,6 +105,10 @@ main{
   }
   @media only screen and (max-width: 800px){
     max-width: 80%;
+  }
+  @media only screen and (max-width: 500px){
+    max-width: 95%;
+    padding: 50px 10px;
   }
   &.no-background{
     background: transparent;
@@ -106,7 +119,7 @@ main{
   margin-top: 50px;
 }
 
-.products, .custom-bags, .custom-upholstery {
+.products, .custom-bags, .custom-upholstery, .before-afters {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -131,6 +144,53 @@ main{
   }
 }
 
+.before-afters {
+  overflow: hidden;
+  margin-bottom: 50px;
+  .product {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+
+    &.before-after {
+      @media only screen and (max-width: 800px) {
+        height: 100%;
+      }
+
+      a {
+        position: relative;
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+
+        @media only screen and (max-width: 800px) {
+          height: 150px;
+          width: 150px;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          max-height: 100%;
+          max-width: 100%;
+          min-height: unset;
+        }
+      }
+    }
+  }
+}
+
+
+.products{
+  margin-bottom: 50px;
+}
 
 h2, h3, p{
   color: #fff;
